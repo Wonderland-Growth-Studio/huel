@@ -1,0 +1,96 @@
+"""One-line, plain-English reason per keyword for the human-readable tab.
+The full technical rationale stays in recommendations.py / the 'Full data' tab."""
+
+WHY = {
+    # Outdoor Food
+    "gefriergetrocknetes essen": "Converting today but only reached through a broad keyword. Same intent as the ad group's best keyword.",
+    "gefriergetrocknete gerichte": "Same freeze-dried intent as the ad group's best keyword; strong return on small spend.",
+    "freeze dried meals": "English version German hikers search; small but clean intent.",
+    "dehydriertes essen": "Dehydrated-food searchers; converting on small spend.",
+    "tactical food": "Converting well, but only reached through a broad keyword today.",
+    "vegane trekkingnahrung": "Huel is 100% vegan; most freeze-dried competitors aren't. Phrase match catches the variations.",
+    "expeditionsnahrung": "Same buyer as trekking food; low competition. Test.",
+    # Competitors - Outdoor Food (new)
+    "trek n eat": "Biggest outdoor competitor; already converting but shown generic copy. Give it comparison copy.",
+    "trek and eat": "Common misspelling of Trek'n Eat.",
+    "adventure food": "Best-performing competitor term in Germany; currently gets generic outdoor copy.",
+    # Competitors - Meal Replacement & Delivery
+    "prep my meal": "Single biggest converting search in DE generic, with no keyword of its own (comes in via 'dinnerly').",
+    "prep my meal alternative": "People actively looking to switch from Prep My Meal; converts above account average.",
+    "prep meal": "Navigational search for Prep My Meal; better served with competitor copy.",
+    "jimmy joy plenny shake": "Direct powdered-meal rival; converting well.",
+    "this is food": "yfood's product name; converting well but currently shown generic copy.",
+    "yfood alternative": "People actively looking to switch from yfood; give it its own bid.",
+    "yfood pulver": "yfood powder buyers are the closest match to Huel Powder.",
+    "löwenanteil alternative": "Switching intent from a brand we already bid on; converting well.",
+    "every foods": "Large ready-meal competitor brand; converting well. Exact only.",
+    "tellerglück": "Healthy ready-meal competitor; converting well.",
+    "onek": "Weight-gain shake brand; converting well. Keep it out of the generic ad groups.",
+    # Competitors - Diet Shakes (new)
+    "metaflow alternative": "Biggest diet-shake brand in Germany; 'alternative' searches already convert.",
+    "metaflow shake": "Huge brand volume; test on a small cap.",
+    "sheko shake": "Large diet-shake brand; early conversions.",
+    "sheko alternative": "Switching intent from Sheko.",
+    "layenberger shake": "Diet-shake brand with cheap clicks; test.",
+    # Competitors - Greens
+    "ag1 erfahrungen": "AG1 buyers reading reviews; lets you write review-angle copy.",
+    "ag1 kritik": "AG1 buyers reading criticism; lets you write a criticism-angle ad.",
+    "ag1 inhaltsstoffe": "AG1 buyers comparing ingredients - a strong angle for Daily Greens.",
+    "biogena one": "Greens competitor currently shown generic Greens copy; move to competitor copy.",
+    # Greens
+    "greens": "Big head term that converts; exact only because the word alone is ambiguous.",
+    "super greens pulver": "Extends the live 'super greens' / 'greens pulver' keywords.",
+    # Meal replacement
+    "mahlzeitenersatz shake": "Literally 'meal replacement shake'; strong return. Currently split with the Weight Loss ad group.",
+    "trinkmahlzeit pulver": "Powder-format buyers = Huel Powder / Black Edition.",
+    "protein trinkmahlzeit": "High-protein meal drink = Black Edition. Strong return.",
+    "protein mahlzeit": "High-protein meal searches; converting.",
+    "meal replacement shake": "English term German users search; converting.",
+    "trinkmahlzeit ohne milch": "Dairy-free is a Huel advantage over yfood and Saturo.",
+    "trinkmahlzeit günstig": "Price-led searchers - Huel Powder's cost per meal wins here.",
+    "trinkmahlzeit test": "Comparison shoppers; use review/award copy.",
+    "frühstücksshake": "Breakfast-shake searches; mixed results so far. Test.",
+    "proteinreiches frühstück": "High-protein breakfast; lots of recipe traffic, so test carefully.",
+    # Ready Meals
+    "gesunde fertiggerichte": "Healthy ready meals; converting well but only exists in a paused ad group.",
+    "protein fertiggerichte": "High-protein ready meals; strong return.",
+    "gesunde 5 minuten terrine": "'Healthy' cup-meal searches convert; the plain Knorr brand search doesn't.",
+    "5 minuten terrine vegan": "Vegan cup-meal searches convert well.",
+    "instant food": "Converting on small spend; fits Hot & Savoury.",
+    "gesunde instant gerichte": "Describes Hot & Savoury exactly; test.",
+    "fertiggerichte ohne kühlung": "Shelf-stable is a Hot & Savoury advantage over chilled meal services. New reach.",
+    "high protein fertiggerichte": "Converting but expensive; its own keyword stops broad overpaying.",
+    # Protein
+    "proteinshake": "40k searches/month, currently shown protein-powder copy. Give it shake copy.",
+    "proteinpulver laktosefrei": "Huel protein is plant-based, so lactose-free by default. Strong return.",
+    "laktosefreies proteinpulver": "Same lactose-free intent, different word order. Watch.",
+    "proteinpulver ohne süßungsmittel": "Converting; only exists in a paused ad group.",
+    "proteinpulver ohne zucker": "Converting; only exists in a paused ad group.",
+    "gesundes proteinpulver": "Fits Huel's 'complete nutrition' positioning.",
+    "bestes proteinpulver": "Comparison shoppers; test with a cap.",
+    # Vegan
+    "proteinpulver vegan": "Half its clicks currently land in the Protein ad group; pin it to vegan copy.",
+    "erbsenprotein": "Pea protein is Huel Complete Protein's main source. New reach.",
+    # Weight Gain
+    "trinkmahlzeit zum zunehmen": "Meal drinks for gaining weight; strong return.",
+    "schnell zunehmen": "Strong return; only exists in a paused ad group.",
+    "hochkalorische nahrung": "High-calorie food buyers; add with the medical-nutrition negatives.",
+    "veganer weight gainer": "Vegan weight gainers are rare - good Huel fit, still unproven.",
+    "getränk zum zunehmen": "Weight-gain drinks. New reach; test.",
+    # Weight Loss
+    "shake zum abnehmen": "Biggest weight-loss shake term, but we barely show on it today.",
+    "trinkmahlzeit zum abnehmen": "Meal drinks for weight loss; converting.",
+    "mahlzeitenersatz abnehmen": "Matches Huel Lite / Powder weight-loss positioning. New reach.",
+    "sättigende shakes zum abnehmen": "Fullness is Huel's weight-loss message; test.",
+    "veganer shake zum abnehmen": "Vegan weight-loss shakes. New reach.",
+    "bester abnehmshake": "Expensive comparison term; test with a cap.",
+    # Brand - Products (Exact)
+    "huel lite": "45 conversions with no keyword of its own. Product-specific ad + landing page.",
+    "huel ready to drink": "Send to the Ready-to-drink page instead of the homepage.",
+    "huel essential": "22 conversions with no keyword of its own.",
+    "huel complete protein": "Different query from the live 'huel protein'; product-specific ad.",
+    "huel pulver": "Send to the Powder page.",
+    "huel riegel": "Send to the bars page.",
+    "huel ramen": "Send to the Hot & Savoury page.",
+    "huel probierpaket": "Send to the starter/bundle page.",
+}
