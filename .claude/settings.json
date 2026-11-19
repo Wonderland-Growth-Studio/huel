@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push -u origin claude/intelligent-mendel-0pnfqo)",
+      "Bash(git push origin claude/intelligent-mendel-0pnfqo)"
+    ]
+  }
+}
