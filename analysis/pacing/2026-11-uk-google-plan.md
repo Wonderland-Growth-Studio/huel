@@ -31,3 +31,31 @@ Account: Huel UK (3455924316). Reviewed with an Opus reviewer working from the s
 - **No new-customer bidding on Shopping core yet.** Test it later, paired with a higher tROAS so spend stays flat.
 - **No action on 16–18 Nov.** UK saw only a mild dip (conversion rate 2.35% → 2.04%), not the collapse seen in DE and PL.
 - **Brand-demand drop (−28% since 5 Oct):** flag it as unexplained, not as something Google can't fix.
+
+---
+
+## Search & Shopping, revised (19 Nov)
+
+**Rule (from the user):** pause something only when Smart Bidding will move that spend to more efficient parts of the account. In practice that means the campaign is budget-capped, or the item takes spend away from another campaign. In uncapped tROAS campaigns, leave weak items to Smart Bidding.
+
+**Budget status, 5–18 Nov:**
+- Capped: WEIGHT_LOSS (£1,343/day vs £1,300 budget) and GENERIC (£436 vs £400).
+- Uncapped: COMPETITORS (£98 vs £200) and SHOPPING_GENERIC_CORE (£3,171 vs £4,700).
+
+New-customer CAC below = spend ÷ "New Customer Purchase", 20 Sep–18 Nov.
+
+**Actions**
+1. **WEIGHT_LOSS (capped): pause "Medical/trending".**
+   - £3.06k for 10.95 new customers, about £280 each. The rest of the campaign runs at £106–152 (Shakes & MR £106, Diet Plans £123, Fasting £141, Core £152).
+   - Because the campaign is capped, the freed spend moves to those ad groups.
+   - Keep Fasting: it has the highest new-customer share in the campaign.
+2. **WEIGHT_LOSS: raise tROAS from 75% to 82%,** after action 1. Since the 22 Oct loosening, the extra conversions have cost about £135 each on the platform.
+3. **GENERIC (capped): pause "Stockpiling".**
+   - £3.71k for 24.3 new customers, about £153 each. The freed spend goes to Convenient Meals (£130) and Weight Gain (£50).
+4. **SHOPPING_STANDARD_BRAND: add non-brand terms as negatives** ("freeze dried meals", "foods to stockpile", "morrisons", and similar). Then run a +20% max CPC test on brand terms only.
+   - This counts as a valid exclusion: the campaign is on Manual CPC, so Smart Bidding doesn't price these terms. It also wins generic queries that Shopping core should serve on tROAS.
+
+**Withdrawn, because Smart Bidding prices these in uncapped campaigns**
+- Pausing Competitors ad groups (Greens & Wellness, Meal Replacement, Sports Nutrition).
+- Shopping core product exclusions.
+- Informational and GLP-1 negatives.
