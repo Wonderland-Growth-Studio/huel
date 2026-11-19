@@ -119,3 +119,24 @@ Volume or CAC for the rest of November? Most of these changes improve one at the
 6. **€99 on 13–14 Nov: answered.** There were no changes in the account, spend was spread across every hour, impressions were lower all day, and 15 Nov then spent €188. That's Google's pacing under Max Conversions, and it becomes moot once the campaign is on Manual CPC.
 7. **Search generic:** run a monthly scan for competitor names and add them as phrase negatives.
 8. **Merchant Center (Daily Greens):** dropped for now; no access yet.
+
+---
+
+## v5 (19 Nov): Huel does not run Black Friday. This replaces v4 where they conflict.
+
+1. **Generic Shopping drop, 16–18 Nov:** cause unexplained.
+   - It isn't a checkout fault: PL brand Shopping and DE brand Search were normal over the same days.
+   - It isn't Huel deal-waiting, because Huel runs no deal.
+   - A possible but unproven driver is competitor Black Week promos pulling price-sensitive generic shoppers away.
+   - **Precedent:** the mid-Nov 2025 dips recovered within a week (PL €59/€130/€62 for the weeks of 3, 10 and 17 Nov; DE €72/€84/€71/€82 for the weeks of 10 Nov to 1 Dec).
+2. **DE Shopping tROAS: decide on Mon 24 Nov.** Go to 95% if both hold for 16–22 Nov (by conversion date): CPA ≤ €80 and CVR ≥ 1.5%. Otherwise stay at 108%.
+   - **Why both tests:** one week is about 35 purchases, so CPA alone carries about ±17% noise.
+   - **Kill-switch:** revert to 108% if CPA (by conversion date) is above €90 on 2 consecutive days.
+3. **Brand: Manual CPC.** Max CPC: huel exact €0.35, products €0.50, broad €0.30. Add exact-match "huel de" and "huel rabattcode" at €0.35 (drop "huel black friday").
+4. **Brand budget: fixed ceiling of €220.**
+   - **Basis:** about 540 clicks a day × €0.28 ≈ €150 normal; peak days about 700 clicks ≈ €210.
+5. **Rules:**
+   - **A (daily):** exact keywords with impressions > 20 and abs-top IS < 80%: raise max CPC by €0.03, cap €0.50.
+   - **B (daily, last 3 days):** abs-top IS > 95% and average CPC > €0.30: lower max CPC by €0.02, floor €0.25.
+   - **C:** email if yesterday's cost > €180 or average CPC > €0.45.
+6. **Search generic:** monthly scan for competitor names, added as phrase negatives.
