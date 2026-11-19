@@ -97,3 +97,25 @@ Account Huel EU (8046071519), EUR; Fospha figures in GBP. Every action is tied t
 
 ## Open decision for Huel
 Volume or CAC for the rest of November? Most of these changes improve one at the expense of the other. The brand switch costs about nothing either way.
+
+---
+
+## v4 update (19 Nov, late): replaces items 1–9 above where they conflict
+
+1. **Why generic Shopping stopped converting:** most likely pre-Black Friday deal-waiting, not a fault.
+   - **Evidence:** shoppers still start checkout but don't finish. PL generic Shopping purchase/checkout fell from 37% to 18%, but PL brand Shopping, on the same checkout, was normal (33–38%). DE brand Search was also normal (60% → 58%).
+   - **Precedent:** PL had the same pre-Black Friday dip in 2025, when the Shopping conversion rate in the week of 10 Nov 2025 was about half the week before, then recovered.
+   - **Action:** ask ecom whether a Black Week teaser, banner or price communication went live on DE/PL on 15–16 Nov.
+2. **DE Shopping tROAS: 108% → 95% on Wed 26 Nov.** That lands the extra bids on Black Friday demand, not deal-waiting week.
+   - **Kill-switch:** revert to 108% if CPA, using purchases by conversion date, is above €90 on 2 consecutive days.
+   - **Review:** 3 Dec.
+3. **Brand: Manual CPC** (huel exact €0.35, products €0.50, broad €0.30). Add exact-match keywords "huel black friday", "huel de" and "huel rabattcode" at €0.35.
+4. **Brand budget: fixed at €250 as a safety ceiling, not touched again.**
+   - **Why €250:** about 540 clicks a day, ×1.18 for the 2025 Black Friday click lift, at ~€0.30 CPC, comes to about €190, which leaves headroom.
+5. **Brand automated rules:**
+   - **A (daily, yesterday):** exact keywords with impressions > 20 and abs-top IS < 80%: raise max CPC by €0.03, capped at €0.50.
+   - **B (daily, last 3 days):** abs-top IS > 95% and average CPC > €0.30: lower max CPC by €0.02, floor €0.25.
+   - **C:** email if yesterday's cost > €220 or average CPC > €0.45.
+6. **€99 on 13–14 Nov: answered.** There were no changes in the account, spend was spread across every hour, impressions were lower all day, and 15 Nov then spent €188. That's Google's pacing under Max Conversions, and it becomes moot once the campaign is on Manual CPC.
+7. **Search generic:** run a monthly scan for competitor names and add them as phrase negatives.
+8. **Merchant Center (Daily Greens):** dropped for now; no access yet.
