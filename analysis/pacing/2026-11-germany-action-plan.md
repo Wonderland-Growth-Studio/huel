@@ -52,24 +52,26 @@ How this was made:
 
 ---
 
-## 3. DE_SEARCH_BRAND: keep Maximise Conversions
+## 3. DE_SEARCH_BRAND: switch to Manual CPC today (enhanced CPC off)
 
-Budget: **€175 now, €200 for 24 Nov–1 Dec, back to €140 on 2 Dec.**
+Budget becomes a ceiling: **€180 now, €250 for 24 Nov–1 Dec, €180 from 2 Dec.**
 
 **Why**
-- **Budget has been the limit for 13 months.** Lost impression share from budget has been 5–17% every week.
-- **Extra brand budget buys the cheapest conversions in the account.**
-  - 13–14 Nov (€99 a day) against 6–7 Nov (€146): spend −32%, clicks −2%, conversions −18%.
-  - That puts the marginal CPA at about €6, against about €70 for Shopping.
-  - Even if most brand conversions would happen organically anyway, that's still the cheapest line.
-- **Black Friday 2025:** conversions were +55% at €131 a day, and lost impression share from budget hit 17%. Covering that needs +25–40% budget, which is €175–200.
-- **Why not more than €200:** extra brand spend mostly buys pricier clicks. 15 Nov: €188 bought 53 conversions at €0.43 CPC. 16 Nov: €145 bought 61.
-- **Why not Target Impression Share:** the budget is what limits the campaign, not the bid strategy.
+- **Under Max Conversions, extra brand spend buys nothing.**
+  - Daily regression (n=110), controlling for weekday: each extra €1 a day buys +4.6 impressions, about 0 clicks (+0.02) and about 0 conversions.
+  - The reviewer re-ran it with trend and demand controls and got the same result: 0.14–0.18 extra clicks per € in each period, against 3.7 at the average CPC.
+  - Spend and CPC move together (correlation 0.46): CPC is €0.31 on days above €155, against €0.26 on other days.
+- **"huel" exact is already almost fully covered.** It takes about 73% of spend and has 93% IS and 84% absolute-top IS at €0.29 (QS 10). The campaign-level "11% lost to budget" sits mainly in Huel (Broad), which has 52% IS, 26% absolute-top, a €0.33 CPC and an 8% conversion rate (12% on exact).
+- **The real gain is control, not a big CPC saving.** A manual cap stops Google inflating CPCs, and the budget can rise as a ceiling for Black Friday demand without paying more per click. Expect CPC to stay about flat. No account data supports a 10–20% saving.
+- **No ad-schedule adjustment.** Absolute-top IS is flat across the day (0.57–0.62 from 6h to 23h). The evening conversion rate is higher (15.8% at 19h against 10.0% at 9h), but that reflects who is searching then, not ad position.
+- **Why switch now:** Manual CPC has no learning period, and switching today gives a 7-day baseline before Black Friday.
+- **Retracted:** the v3 budget raise under Max Conversions (€175/€200) would mostly have inflated CPC. The "€6 marginal CPA" from 13–14 Nov was confounded by 24% lower demand on those days.
 
 **Actions**
-- [ ] Today: budget €175.
-- [ ] Schedule €200 for 24 Nov–1 Dec, then €140 from 2 Dec. Total extra cost is about €650.
-- [ ] Find out what capped spend at exactly €99 on 13–14 Nov. Change history shows no budget change.
+- [ ] Before switching, add exact-match keywords at €0.35 for "huel black friday", "huel de" and "huel rabattcode". They currently run through broad (74 clicks / 8 conversions on "huel de").
+- [ ] Switch the bidding to Manual CPC. Max CPC: "huel" exact **€0.35** (only 8 of 110 days averaged above it); product exacts **€0.50** (black edition already averages €0.38; daily greens has only 20% absolute-top at €0.35); Huel (Broad) **€0.30**.
+- [ ] Budget ceiling: €180, then €250 for 24 Nov–1 Dec.
+- [ ] Check daily (twice a day 26 Nov–1 Dec): absolute-top IS on "huel" exact ≥ 80%, and on "huel black friday". If it falls, raise bids by €0.03. Check auction insights in the UI for competitor conquesting. IS data arrives about a day late.
 
 ---
 
@@ -83,7 +85,7 @@ Budget: **€175 now, €200 for 24 Nov–1 Dec, back to €140 on 2 Dec.**
 | Product exclusions | Exclude 2 SKUs (v2) | **None** | Spicy Chick'n noodles is within its 10-week range |
 | Black Friday tROAS cut | Planned (v2) | **None** | 2025 Black Friday AOV was normal |
 | Search justification | £231 marginal | **£128 vs £97 averages** | The marginal fit has R² 0.55; the averages are solid |
-| Brand Black Friday budget | €250–280 | **€200** | The real marginal CPA is €6.2, not €2.6. Extra budget buys pricier clicks |
+| Brand bidding | Max Conversions + budget €175/€200 | **Manual CPC (€0.35 / €0.50 / €0.30) + budget ceiling €180/€250** | The user's view, tested. With weekday controls, extra spend buys 0 clicks and 0 conversions |
 
 ## Open decision for Huel
-Volume or CAC for the rest of November? Germany is 252 new customers behind target, and CPA is 107% of target. Each recommendation above improves one and costs some of the other. The brand change is the exception: it's cheap enough to improve both.
+Volume or CAC for the rest of November? Germany is 252 new customers behind target, and CPA is 107% of target. Each recommendation above improves one and costs some of the other. The brand switch is the exception: it costs about nothing either way.
