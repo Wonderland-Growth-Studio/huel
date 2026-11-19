@@ -17,10 +17,15 @@ Account Huel EU (8046071519). Reviewed with a second Opus reviewer working from 
    - GA4 shows it independently: PL 9.2 → 2.7 purchases a day, DE 10.2 → 2.7 (by conversion date).
    - On the same days, brand Shopping is normal in PL, and account-level new-customer purchases show no collapse (86, 62, 67 a day against 63–112 over 9–15 Nov).
 
+## Deciding test: result (Fospha Channel Monthly, DE, received 19 Nov)
+- **Fospha DE new customers, Jul → Aug:** total 4,278 → 4,442 (+4%). Paid Search 1,697 → 1,757 (+3.5%). Paid Search visits 33K → 32K.
+- **Same period:** Ads tag 3,198 → 3,223 (+1%). GA4 import 3,171 → 4,199 (+32%).
+- **Conclusion:** actual orders didn't rise about 30%, so the tag didn't start missing purchases. Since August, GA4 credits more purchases to Google Ads. It counts each order once but attributes more of them to Google Ads, perhaps through a window, attribution or channel-credit change.
+- **Keep optimising to the Ads tag.**
+- **Caveat:** Fospha counts new customers only. A roughly 30% jump in existing-customer purchases would be needed to change this conclusion, and the tag, which also fires on existing-customer purchases, shows no such jump.
+
 ## Actions
-1. **Run the deciding test.** Did DE backend orders (Shopify or Fospha total new customers) rise about 32% from July to August?
-   - If not, GA4 is over-crediting, and we keep optimising to the Ads tag.
-   - If they did, the Ads tag is missing purchases and needs fixing before Black Friday.
+1. **Deciding test: done.** Orders were up only about 4%, so GA4 is over-crediting. Keep optimising to the Ads tag.
 2. **Find out what changed in GA4 in early August**, for example attribution or channel credit settings, or modelling.
 3. **Do NOT switch the primary conversion to GA4 before Black Friday.** Adding GA4 as a second primary would double-count, and swapping it in would loosen bidding abruptly, 8 days before Black Friday.
 4. **Remove "Transactions DK (All Web Site Data)", a dead Universal Analytics action, from the primary conversions.**
