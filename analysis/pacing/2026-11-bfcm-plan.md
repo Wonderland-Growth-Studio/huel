@@ -3,7 +3,11 @@
 Huel runs BFCM for exactly these 4 days. Reviewed with an Opus reviewer working from the same data.
 
 ## Do now (before 27 Nov)
-1. **DE Shopping generic: hold tROAS at 108% through BFCM, and make the 95% call on 7 Dec using post-event data.** The 24 Nov decision is dropped. 24–26 Nov is a likely pre-sale lull, so a change then can't be read.
+1. **DE Shopping generic: lower tROAS from 108% to 95% now and keep it through BFCM.** The user's criterion is to keep the funnel big.
+   - **Why:** Google NC cost held at €83–89 a week while spend swung between €3.8k and €6.5k a week. The volume tROAS cut was NC at about €88, the same as average, not marginal waste.
+   - **The funnel is shrinking.** IS fell from 39% to 33% and clicks fell 21%.
+   - **Pre-sale clicks feed the sale.** A click on 23–26 Nov that buys on 27–30 Nov is still credited, under the 7-day click window.
+   - **Guardrail until 26 Nov:** revert to 108% only if spend runs above €1,000 a day **and** the 3-day cost per NC (by conversion date) is above €120. After that, the BFCM rules apply.
 2. **Search, all brand and non-brand campaigns in DE/PL/UK:** add promotion assets, offer copy and a countdown, scheduled 27 Nov 00:00 to 30 Nov 23:59.
 3. **Shopping:** ecom schedules `sale_price` with `sale_price_effective_date` for the same window. A Merchant Center promotion on its own isn't enough: if site and feed prices don't match, products get disapproved for price mismatch in the middle of the sale.
 4. **Brand budget ceilings, set once:**
@@ -29,6 +33,6 @@ Huel runs BFCM for exactly these 4 days. Reviewed with an Opus reviewer working 
 
 ## After BFCM
 11. **2 Dec: switch UK Demand Gen prospecting to new-customer acquisition.** That keeps its learning period out of BFCM.
-12. **7 Dec: read BFCM results and make the DE Shopping 95% decision.**
+12. **7 Dec: read BFCM results.** Decide whether DE Shopping stays at 95%, using NC cost for 20 Nov–6 Dec including BFCM.
 
 The changes already agreed (DE brand Manual CPC, UK WL Medical pause, UK Generic Stockpiling pause, UK brand Shopping negatives) go ahead now.
