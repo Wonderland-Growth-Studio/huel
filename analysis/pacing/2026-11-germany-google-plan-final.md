@@ -8,7 +8,9 @@ Account Huel EU (8046071519), EUR; Fospha figures in GBP. Every action is tied t
 
 ## Actions we are taking
 
-1. **DE_SHOPPING_STANDARD_GENERIC: lower tROAS from 108% to 95% today.**
+1. **DE_SHOPPING_STANDARD_GENERIC: lower tROAS from 108% to 95%. On hold until 21 Nov** (update 19 Nov, from the Poland review).
+   - **Why the hold:** by conversion date, DE generic Shopping fell from 8.8 to 3.6 conversions a day on 16–18 Nov (conversion rate 1.9% → 1.0%). PL shows the same drop, while brand Shopping is normal. Lowering the target now would buy clicks at that conversion rate.
+   - Diagnose first: Merchant Center, Black Week pre-announcement, product pages. If conversion rate is back to normal by 21 Nov, apply 95% so it's in place before Black Friday.
    - **Why:** in the week of 9 Nov, value per click fell 35%. Conversion rate went from 2.25% to 1.71%, and AOV fell from €73 to €62, a 13-month low against a median of €71. ROAS dropped from 1.07 to 0.89, under target, so Google cut CPC 23%. Spend fell 41% and conversions 42%.
    - **CPA held at €69–70**, below the 58-week median of €72.5. Fospha Shopping new customers fell from 55 to 40 a week, while CAC went from £102 to £82.
    - **Expect a modest lift, not a return to €900 a day.** The ROE Shopping cut from 108% to 102% (30 Oct) produced no measurable spend increase.
