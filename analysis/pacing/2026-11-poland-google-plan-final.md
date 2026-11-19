@@ -59,3 +59,21 @@ Account Huel EU (8046071519), EUR; Fospha figures are GBP. I drafted from the da
 | Shopping last 7 days | Lag, re-read 23 Nov | Real conversion-rate drop, diagnose today | Conversions by conversion date −59%, brand Shopping normal |
 | Meta | Move money to Meta | No shift | Same 4-week CAC; Meta was cheap only at lower spend |
 | Reviewer: "ROE also dropped" | – | Not confirmed | ROE generic 3.4 a day in both periods |
+
+---
+
+## Update, 19 Nov: Competitors ad group, re-checked after the user's instruction to pause it
+
+| PL_SEARCH_GENERIC Competitors | Aug | Sep | Oct | Nov (1–18) |
+|---|---|---|---|---|
+| Spend | €1,464 | €1,345 | €679 | €452 |
+| Conversions | 18.9 | 9.0 | 7.1 | 2.0 |
+| CPA | €77 | €149 | €96 | €226 |
+| Campaign CPA | €94 | €118 | €101 | €115 |
+
+- **Aug–Nov overall:** €3.9k for 37 conversions, €106 per conversion, the same as the campaign (€105).
+- **November:** €226 is double the campaign, but on 2 conversions.
+- **Quality Score:** 1 on every competitor-brand keyword, and 3 on the "liofilizowane" generics.
+- **KFD exact** is 61% of the ad group's spend, at €122 per conversion (19.7 conversions).
+- **The campaign isn't budget-capped:** 0% budget-lost IS in every week, tROAS 70%. Pausing doesn't move spend elsewhere; it just removes about €750 and about 3 conversions a month.
+- **Status:** the user's call. If paused, keep the generic "liofilizowane" keywords alive by moving them to Outdoor.
