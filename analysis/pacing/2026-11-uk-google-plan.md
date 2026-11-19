@@ -59,3 +59,35 @@ New-customer CAC below = spend ÷ "New Customer Purchase", 20 Sep–18 Nov.
 - Pausing Competitors ad groups (Greens & Wellness, Meal Replacement, Sports Nutrition).
 - Shopping core product exclusions.
 - Informational and GLP-1 negatives.
+
+---
+
+## Correction, 19 Nov: UK Generic "Stockpiling" — KEEP it (pause withdrawn)
+Stockpiling is a new ad group. It launched 2 Nov, alongside the Generic budget raise from £150 to £350 to £400, so its 60-day average includes its learning week.
+
+| UK_SEARCH_GENERIC, Google New Customer Purchase | Wk 2 Nov | Wk 9 Nov | 16–18 Nov |
+|---|---|---|---|
+| Stockpiling | £1,349 / 4.2 NC (£321) | £1,665 / 12.7 NC (£131) | £699 / 7.4 NC (£94) |
+| Convenient Meals | £1,250 / 5.8 NC (£216) | £966 / 11.3 NC (£86) | £339 / 5.5 NC (£62) |
+| Weight Gain (new, from 9 Nov) | – | £375 / 7.9 NC (£47) | £173 / 3.0 NC (£58) |
+
+- Since 9 Nov, Stockpiling has been the largest source of NC in the campaign: 20 NC in 10 days, against 17 for Convenient Meals. It has come down to the same cost per NC.
+- Pausing it would cut the funnel. **Keep it, and raise the budget from £400 to £450** (needed for the monthly limit).
+
+## Volumes check: Weight Loss "Medical/trending" — pause stands (small effect)
+
+**Medical/trending since 2 Nov:** £1,532 for 8.5 NC (£180 per NC), about 3.5 NC a week out of roughly 95 a week for the whole WL campaign.
+
+**The other WL ad groups since 2 Nov:**
+
+| Ad group | Spend | NC | Cost per NC |
+|---|---|---|---|
+| Shakes & MR | £8.19k | 85.6 | £96 |
+| Diet Plans | £7.42k | 78.8 | £94 |
+| Core | £3.43k | 29.2 | £117 |
+| Fasting | £3.67k | 29.6 | £124 |
+
+**Effect of pausing Medical/trending.** WL is capped, so its roughly £600 a week moves to those ad groups.
+- At about £100 per NC, that buys roughly 6 NC.
+- Pausing gives up about 3.5 NC.
+- The net gain is about 2–3 NC a week. That's a small win.
