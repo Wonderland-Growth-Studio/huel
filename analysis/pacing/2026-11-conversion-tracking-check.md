@@ -24,8 +24,28 @@ Account Huel EU (8046071519). Reviewed with a second Opus reviewer working from 
 - **Keep optimising to the Ads tag.**
 - **Caveat:** Fospha counts new customers only. A roughly 30% jump in existing-customer purchases would be needed to change this conclusion, and the tag, which also fires on existing-customer purchases, shows no such jump.
 
+## Revised reading (after the user's challenge, reviewed again)
+GA4 isn't inventing orders. The Fospha test above only rules out real order growth. It doesn't show which system is right.
+
+**What the data shows**
+- The DE jump from Jul to Aug is in same-day purchases: GA4's "<1 day" bucket went from 2,605 to 3,645. The 7–30 day buckets are flat, so the 30-day window doesn't explain it.
+- It's uniform across campaigns, roughly +25–36% for GA4 against a flat tag:
+  - Brand Search: GA4 2,035→2,767, tag 2,034→2,134.
+  - Generic Shopping: GA4 331→445, tag 353→351.
+- It's uniform across devices: GA4÷tag went from 1.17 to 1.54 on desktop and from 0.94 to 1.24 on mobile. So it isn't a Safari or iOS issue.
+- DE Google clicks fell 4%.
+
+**Two explanations remain**
+- **(a) GA4 now *sees* Google-driven purchases the tag misses.** This could follow a consent or measurement change, or GA4 could be double-firing. If GA4 is right, the tag has under-counted since August.
+- **(b) GA4 now *credits* Google Ads with orders it used to give organic or direct.** This could come from a conversion-credit or attribution setting change. In that case the tag is the better count.
+
+Google Ads data alone can't separate (a) from (b).
+
 ## Actions
-1. **Deciding test: done.** Orders were up only about 4%, so GA4 is over-crediting. Keep optimising to the Ads tag.
+1. **Deciding test, in GA4 itself:** compare DE all-channel purchases with backend orders for July against August.
+   - If GA4's total rose by about 1,000 while backend orders rose only about 4%, it's (a) or double-firing.
+   - If GA4's total is flat and only the Google Ads share rose, with organic or direct down by about 1,000, it's (b), and the tag is the better count.
+   - Also check GA4 Admin change history on all four EU properties for early August: attribution settings, conversion-credit channels and consent settings. Check for any consent-banner change on the sites too.
 2. **Find out what changed in GA4 in early August**, for example attribution or channel credit settings, or modelling.
 3. **Do NOT switch the primary conversion to GA4 before Black Friday.** Adding GA4 as a second primary would double-count, and swapping it in would loosen bidding abruptly, 8 days before Black Friday.
 4. **Remove "Transactions DK (All Web Site Data)", a dead Universal Analytics action, from the primary conversions.**
