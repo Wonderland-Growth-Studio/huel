@@ -1,0 +1,10 @@
+rows per language: 68; languages: de, fr, nl, it, es, pt, el
+de: title len min 88 max 121 avg 103; desc max 733
+fr: title len min 94 max 135 avg 113; desc max 785
+nl: title len min 74 max 126 avg 102; desc max 737
+it: title len min 91 max 135 avg 110; desc max 752
+es: title len min 90 max 132 avg 112; desc max 753
+pt: title len min 83 max 133 avg 111; desc max 763
+el: title len min 75 max 136 avg 105; desc max 757
+issues:
+none
