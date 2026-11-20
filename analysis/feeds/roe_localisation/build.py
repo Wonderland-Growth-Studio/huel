@@ -230,6 +230,13 @@ rv.freeze_panes = "C2"
 
 wb.save(os.path.join(HERE, "ROE_feed_localised.xlsx"))
 
+# client-facing copy: feed tabs only (no READ ME / search-term / review tabs)
+for name in ["READ ME", "Search term check", "Title review"]:
+    del wb[name]
+wb["EN (source)"].title = "EN - IE"
+wb.active = 0
+wb.save(os.path.join(HERE, "ROE_feed_localised_client.xlsx"))
+
 # QA report
 with open(os.path.join(HERE, "qa_report.txt"), "w", encoding="utf-8") as fh:
     fh.write(f"rows per language: {len(DATA)}; languages: {', '.join(LANGS)}\n")
