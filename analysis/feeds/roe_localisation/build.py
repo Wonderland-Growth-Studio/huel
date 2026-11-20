@@ -101,10 +101,19 @@ for lang in LANGS:
     out[lang] = o
 
 # ------------------------------------------------------------- outputs
+# custom_label_4 = feed content language (ISO 639-1), inserted after custom_label_3,
+# so Google Ads can segment/report by feed language (segments.product_custom_attribute4).
+I_L4 = COL["custom_label_3"] + 1
+HEAD_OUT = HEAD[:I_L4] + ["custom_label_4"] + HEAD[I_L4:]
+def with_lang(data, code):
+    return [r[:I_L4] + [code] + r[I_L4:] for r in data]
+def shifted(i):
+    return i + 1 if i >= I_L4 else i
+
 os.makedirs(os.path.join(HERE, "csv"), exist_ok=True)
-for lang, o in out.items():
+for lang, o in list(out.items()) + [("en", DATA)]:
     with open(os.path.join(HERE, "csv", f"feed_{lang}.csv"), "w", encoding="utf-8", newline="") as fh:
-        csv.writer(fh).writerows([HEAD] + o)
+        csv.writer(fh).writerows([HEAD_OUT] + with_lang(o, lang))
 
 # search-term validation layer
 def norm(s):
@@ -178,23 +187,24 @@ for line in notes:
 ws.column_dimensions["A"].width = 160
 for c in ws["A"]: c.alignment = Alignment(wrap_text=True, vertical="top")
 
-def feed_sheet(name, data):
+def feed_sheet(name, data, code):
     s = wb.create_sheet(name)
-    s.append(HEAD)
-    for r in data: s.append(r)
-    for j, h in enumerate(HEAD, 1):
+    s.append(HEAD_OUT)
+    for r in with_lang(data, code): s.append(r)
+    for j, h in enumerate(HEAD_OUT, 1):
         cell = s.cell(1, j); cell.fill, cell.font = hdr_fill, hdr_font
         s.column_dimensions[get_column_letter(j)].width = 14
-    for idx, w in [(I_TITLE, 60), (I_DESC, 80), (I_HL, 50), (I_PD, 40)]:
+    s.cell(1, I_L4 + 1).fill = PatternFill("solid", fgColor="38761D")
+    for idx, w in [(shifted(I_TITLE), 60), (shifted(I_DESC), 80), (shifted(I_HL), 50), (shifted(I_PD), 40)]:
         s.column_dimensions[get_column_letter(idx + 1)].width = w
         if name != "EN (source)":
             s.cell(1, idx + 1).fill = PatternFill("solid", fgColor="B45F06")
     s.freeze_panes = "B2"
 
-feed_sheet("EN (source)", DATA)
+feed_sheet("EN (source)", DATA, "en")
 for lang in LANGS:
     en, native, countries = LANG_META[lang]
-    feed_sheet(f"{lang.upper()} - {'+'.join(countries)}", out[lang])
+    feed_sheet(f"{lang.upper()} - {'+'.join(countries)}", out[lang], lang)
 
 v = wb.create_sheet("Search term check")
 v.append(["Search term (ROE, last 90 days)", "Language", "Clicks", "Conv.", "Campaigns", "Concept checked in titles", "# titles containing it", "Decision"])

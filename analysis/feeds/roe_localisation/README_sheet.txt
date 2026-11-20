@@ -1,5 +1,6 @@
 ## HUEL - REST OF EUROPE PRODUCT FEED, LOCALISED (DE / FR / NL / IT / ES / PT / EL)
 Source: "NEW ROE product feed" (68 rows). One tab per language. Each tab is the source feed copied exactly: same columns, same order, same values. Only these 4 columns change (orange headers): title, description, product_highlights, product_detail.
+One column is ADDED to every tab, including EN (green header): custom_label_4, placed right after custom_label_3. It holds the feed language code: en, de, fr, nl, it, es, pt, el.
 
 ## LANGUAGE → COUNTRY (from the ROE_SHOPPING_STN_GENERIC targeting in Google Ads)
 DE  → Austria, Switzerland
@@ -26,6 +27,8 @@ product_detail → TRANSLATED. Shown to shoppers as structured spec rows. sectio
 google_product_category (5702) → KEEP. A numeric ID is language-neutral. Google: "If the taxonomy... isn't available in your language, use the English values or numeric ID."
 product_type → KEEP IN ENGLISH. Your own internal taxonomy, used for bidding and reporting. It is not shown to shoppers. Keeping it identical keeps reporting comparable across languages.
 custom_label_0-3 → KEEP IN ENGLISH (critical). The ROE Shopping campaigns subdivide product groups on custom_label_0. Translating it would drop every product into "Everything else".
+custom_label_4 → NEW: feed language (en/de/fr/nl/it/es/pt/el). For reporting in Google Ads, segment by "Custom label 4" in the Products / Product groups report (API: segments.product_custom_attribute4). Because Belgium and Switzerland run 2-3 languages, this is the only way to split performance by language there. Not used in any product group today, so bidding is unaffected. If you later want separate bids per language, subdivide product groups on it. Values are lowercase because Google Ads lowercases custom labels anyway.
+Merchant Center: custom_label_4 must be in all 8 data sources, including the English one. Otherwise the EN products show up as "(not set)" in reports.
 shipping_label, shipping, free_shipping_threshold, price, availability, condition, brand, gtin, mpn, ids, links, images → KEEP.
 
 ## HOW TO SET IT UP IN MERCHANT CENTER (account 5348230986, feed label ROE_FEED)
