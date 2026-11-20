@@ -125,16 +125,16 @@ LOCAL = [
  ("substitut repas", "fr", "substitut de repas", "used"), ("repas protéiné", "fr", "proteine", "used (BE powder lead)"),
  ("repas a boire", "fr", "repas a boire", "used"), ("boisson repas", "fr", "repas a boire", "covered by 'repas à boire'"),
  ("repas liquide", "fr", "repas a boire", "covered by 'repas à boire'"), ("repas en poudre", "fr", "repas complet en poudre", "used"),
- ("boisson protéinée", "fr", "proteine", "partial – used 'protéiné' modifier"), ("barre protéinée", "fr", "barres proteinees", "used"),
+ ("boisson protéinée", "fr", "proteine", "partial - used 'protéiné' modifier"), ("barre protéinée", "fr", "barres proteinees", "used"),
  ("nouilles protéinées", "fr", "nouilles", "used (ramen titles)"), ("proteine sans gluten", "fr", "sans gluten", "used (GF powder)"),
  ("plat proteine", "fr", "plat prepare riche en proteines", "used"),
  ("maaltijdshake", "nl", "maaltijdshake", "used"), ("maaltijd shake", "nl", "maaltijdshake", "used"),
  ("maaltijdshakes", "nl", "maaltijdshake", "used"), ("maaltijdvervangers", "nl", "maaltijdvervanger", "used"),
  ("maaltijd vervangers", "nl", "maaltijdvervanger", "used"), ("drinkmaaltijd", "nl", "drinkmaaltijd", "used"),
- ("ontbijtshake", "nl", "ontbijt", "not used in title – in description ('ontbijt')"),
+ ("ontbijtshake", "nl", "ontbijt", "not used in title - in description ('ontbijt')"),
  ("eiwitpoeder", "nl", "eiwitpoeder", "used"), ("vegan eiwitpoeder", "nl", "vegan eiwitpoeder", "used"),
  ("proteine poeder", "nl", "eiwitpoeder", "covered by 'eiwitpoeder'"), ("kant en klare maaltijden", "nl", "kant en klaar", "used"),
- ("batidos sustitutivos", "es", "batido sustitutivo", "used"), ("batidos sustitutivos de comida para adelgazar", "es", "batido sustitutivo de comida", "used – 'adelgazar' deliberately NOT added (EU claims)"),
+ ("batidos sustitutivos", "es", "batido sustitutivo", "used"), ("batidos sustitutivos de comida para adelgazar", "es", "batido sustitutivo de comida", "used - 'adelgazar' deliberately NOT added (EU claims)"),
  ("proteina vegana", "es", "proteina vegana", "used"), ("proteina vegetal", "es", "proteina", "covered by 'proteína vegana'"),
  ("proteina sin gluten", "es", "sin gluten", "used (GF powder)"), ("proteina en polvo", "es", "proteina vegana en polvo", "used"),
  ("comida preparada", "es", "comida preparada", "used"),
@@ -194,12 +194,12 @@ def feed_sheet(name, data):
 feed_sheet("EN (source)", DATA)
 for lang in LANGS:
     en, native, countries = LANG_META[lang]
-    feed_sheet(f"{lang.upper()} – {'+'.join(countries)}", out[lang])
+    feed_sheet(f"{lang.upper()} - {'+'.join(countries)}", out[lang])
 
 v = wb.create_sheet("Search term check")
 v.append(["Search term (ROE, last 90 days)", "Language", "Clicks", "Conv.", "Campaigns", "Concept checked in titles", "# titles containing it", "Decision"])
 for r in val_rows: v.append(r)
-v.append([]); v.append(["English-language terms (IE + English searchers elsewhere) – served by the EN source feed, unchanged"]); v.cell(v.max_row, 1).font = bold
+v.append([]); v.append(["English-language terms (IE + English searchers elsewhere) - served by the EN source feed, unchanged"]); v.cell(v.max_row, 1).font = bold
 for t in EN_SEEN:
     a = agg.get(t, [0, 0, 0.0, set()]); v.append([t, "English", a[1], round(a[2], 1), "/".join(sorted(a[3])), "", "", "EN feed (unchanged)"])
 for j in range(1, 9):

@@ -1,4 +1,4 @@
-## HUEL – REST OF EUROPE PRODUCT FEED, LOCALISED (DE / FR / NL / IT / ES / PT / EL)
+## HUEL - REST OF EUROPE PRODUCT FEED, LOCALISED (DE / FR / NL / IT / ES / PT / EL)
 Source: "NEW ROE product feed" (68 rows). One tab per language. Each tab is the source feed copied exactly: same columns, same order, same values. Only these 4 columns change (orange headers): title, description, product_highlights, product_detail.
 
 ## LANGUAGE → COUNTRY (from the ROE_SHOPPING_STN_GENERIC targeting in Google Ads)
@@ -19,17 +19,17 @@ Descriptions keep every fact in the English source (protein grams, fibre, 26 vit
 Deliberately NOT added: weight-loss wording ("abnehmen", "adelgazar", "minceur" and similar). It shows up in search terms, but weight-control claims on meal replacements are tightly regulated in the EU (Reg. 1924/2006, Reg. 2016/1813), and Google's health policies apply too. "Low calorie" / "kalorienarm" was also avoided: Lite Ramen is about 350 kcal/100 g, so it does not qualify for that claim. "Under 230 kcal" is used instead.
 Brand "Huel" was added to every title. The source titles don't include it, and Google's title best practice puts brand in the title.
 
-## GOOGLE SPEC VALIDATION – WHAT DOES / DOESN'T NEED TRANSLATING
+## GOOGLE SPEC VALIDATION - WHAT DOES / DOESN'T NEED TRANSLATING
 title, description → TRANSLATED. These are shown to shoppers and must be in the feed's content language.
-product_highlight → TRANSLATED. Shown to shoppers. Google: "Describe only the product itself... Don't provide your business's history or policies"; foreign-language words are not allowed. The source contains "Free mainland UK delivery over £45" on the 7 ramen rows. That is a shipping/policy claim, and it is wrong for EU customers, so it was removed from every translation. Empty "" items in the source were also removed (minimum 2, recommended 4–6 per product).
+product_highlight → TRANSLATED. Shown to shoppers. Google: "Describe only the product itself... Don't provide your business's history or policies"; foreign-language words are not allowed. The source contains "Free mainland UK delivery over £45" on the 7 ramen rows. That is a shipping/policy claim, and it is wrong for EU customers, so it was removed from every translation. Empty "" items in the source were also removed (minimum 2, recommended 4-6 per product).
 product_detail → TRANSLATED. Shown to shoppers as structured spec rows. section_name, attribute_name and attribute_value were all localised.
 google_product_category (5702) → KEEP. A numeric ID is language-neutral. Google: "If the taxonomy... isn't available in your language, use the English values or numeric ID."
 product_type → KEEP IN ENGLISH. Your own internal taxonomy, used for bidding and reporting. It is not shown to shoppers. Keeping it identical keeps reporting comparable across languages.
-custom_label_0–3 → KEEP IN ENGLISH (critical). The ROE Shopping campaigns subdivide product groups on custom_label_0. Translating it would drop every product into "Everything else".
+custom_label_0-3 → KEEP IN ENGLISH (critical). The ROE Shopping campaigns subdivide product groups on custom_label_0. Translating it would drop every product into "Everything else".
 shipping_label, shipping, free_shipping_threshold, price, availability, condition, brand, gtin, mpn, ids, links, images → KEEP.
 
 ## HOW TO SET IT UP IN MERCHANT CENTER (account 5348230986, feed label ROE_FEED)
-1. Create one data source per language. Use the same feed label (ROE_FEED) so the existing ROE Shopping campaigns pick them up, set the content language to DE/FR/NL/IT/ES/PT/EL, and target the countries above. Belgium and Switzerland get 2–3 data sources each. That is supported: Google serves the version that matches the user's language.
+1. Create one data source per language. Use the same feed label (ROE_FEED) so the existing ROE Shopping campaigns pick them up, set the content language to DE/FR/NL/IT/ES/PT/EL, and target the countries above. Belgium and Switzerland get 2-3 data sources each. That is supported: Google serves the version that matches the user's language.
 2. Keep the English source data source live with all countries. It serves IE and English-language searchers. Shopping matches today are mostly English queries ("yfood", "protein powder", "meal replacement shakes") because the feed is English. The local-language feeds add coverage on local queries; they don't replace the English matches.
 3. LANDING PAGE LANGUAGE: Google expects the landing page in the same language as the feed. Every link points to eu.huel.com (one row uses /de-at/). If eu.huel.com has locale paths (e.g. /fr-fr/, /nl-nl/), swap the link column per tab before upload. I could not verify this from here, so please confirm.
 4. Switzerland: prices are in EUR. Confirm Merchant Center currency conversion is on for CH, or add CHF prices.
